@@ -1,0 +1,153 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+#frame1 {
+	width: 50%;
+	height: 500px;
+	border-style: none;
+}
+.primary {
+	margin: 15px 15px;
+}
+
+/**
+ * This work is licensed under the Creative Commons
+ * Attribution 3.0 Unported License. To view a copy
+ * of this license, visit http://creativecommons.org/licenses/by/3.0/.
+ *
+ * Author: Girish Sharma <scrapmachines@gmail.com>
+ */
+
+/* Demo specific styles begin */
+
+* {margin: 0; padding: 0;}
+body {	
+	background: #eee;
+}
+.loader-ring {
+  top: calc(50% - 5px);
+  left: calc(50% - 5px);
+}
+/* Demo specific styles end */
+
+/* Loader ring with 6 dots */
+.loader-ring, .loader-ring:before, .loader-ring:after {
+  display: inline-block;
+  width: 15px;
+  height: 40px;
+  line-height: 80px;
+  transform-origin: 8px 0px;
+  color: teal;
+  font-size: 40px;
+  font-family: "Times New Roman";
+  position: absolute;
+  z-index: 100000;
+  content: '•';
+}
+.loader-ring:before, .loader-ring:after {
+  opacity: 0;
+  text-shadow: 12px -2px 0px teal, -12px -2px 0px teal;
+  transform: rotateZ(0deg);
+  animation: loading 4s cubic-bezier(.15,.65,.85,.35) infinite, loading-shadow 2s cubic-bezier(.25,.75,.35,1) infinite alternate, loading-opacity 1s infinite;
+}
+.loader-ring:after {
+  animation-delay: 1.35s;
+}
+@keyframes loading {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes loading-shadow {
+  from {
+    text-shadow: 35px -15px 0px teal, -35px -15px 0px teal;
+  }
+}
+@keyframes loading-opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}

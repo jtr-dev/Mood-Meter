@@ -1,0 +1,35 @@
+        <form class="notification-form" >
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" placeholder="Notification Title" ng-model="title"/>
+            </div>
+            <div class="form-group">
+                <label for="message">Notification Text</label>
+                <textarea class="form-control" rows="3" id="message" placeholder="Notification Text" ng-model="text"></textarea>
+            </div>
+            <button class="show-button btn btn-primary" notification-title="title" notification-text="text">Show Notification</button>
+        </form>
+<div class="container">
+	<div class="row">
+		<div class="loader-ring" ng-show="loading"></div>
+		<p class="warning">{{error.message}}</p>
+		<div class="main" ng-show="!loading">
+			<div class="pull-right primary">For my friend
+				<p>Be aware the gifs are random</p>
+			</div>
+			<div>He has won <span id="won"> {{data.wins}} </span><span> out of the past 5 games:  </span>
+				<div id="games" ng-repeat="match in data.all_match_ids">
+					<a href="https://dotabuff.com/matches/{{match}}">{{match}}</a>
+				</div>
+
+			</div>
+			<div class="jumbotron">
+				<button class="btn-primary btn primary" id="getGiphy" ng-click="getGiphy()">What's Drazys' Mood based on recent DOTA matches?</button>
+				<div>
+					<iframe width="640" height="385" ng-src="{{trustSrc(gif)}}" frameborder="0">
+				</div>
+			<hr/>
+			</div>
+		</div>
+	</div>
+</div>
