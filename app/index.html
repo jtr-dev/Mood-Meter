@@ -58,7 +58,7 @@
 		</div>
 	</div>
 
-	<!--<script>
+	<script>
          if('serviceWorker' in navigator) {
            navigator.serviceWorker.register('sw.js', { scope: '/' })
              .then(function(registration) {
@@ -68,7 +68,7 @@
               console.log('Service Worker Ready');
            });
          }
-    </script>-->
+    </script>
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 	<script>
@@ -98,10 +98,11 @@
 	<!-- endbuild -->
 	<script src="scripts/scripts.js"></script>
 	<!-- !build:js({.tmp,app}) scripts/scripts.js -->
-	<script src="scripts/services/push.factory.js"></script>
 	<script src="scripts/app.js"></script>
 	<script src="scripts/controllers/main.js"></script>
 	<script src="scripts/services/moodService.js"></script>
+	<script src="scripts/services/moodFactory.js"></script>
+
 	<!-- endbuild -->
 </body>
 

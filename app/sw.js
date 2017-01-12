@@ -21,7 +21,7 @@
 
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open('transitServiceWorker').then(cache => {
+    caches.open('mood-meter').then(cache => {
       return cache.addAll([
       '/',
         '/index.html',
